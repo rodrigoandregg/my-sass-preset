@@ -1,0 +1,12 @@
+@use 'vars' as *;
+
+
+@mixin flexBox($ff: row nowrap, $jc: center, $ai: center) {
+	display: flex;
+	flex-flow: $ff;
+	justify-content: $jc;
+	align-items: $ai;
+}
+
+
+

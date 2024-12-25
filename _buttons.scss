@@ -1,0 +1,35 @@
+@use 'vars' as *;
+
+@mixin btn(
+	$bg-clr: $dark,
+	$hover-bg: $light,
+	$clr: $light,
+	$hover-clr: $secondary,
+	$p: 0.5em 1em,
+	$fsz: 1em
+) {
+	@include flexBox;
+	gap: 1em;
+	min-height: 3.5em;
+	min-width: 8em;
+	padding: $p;
+	font-size: $fsz;
+	font-weight: 600;
+	color: $clr;
+	background-color: $bg-clr;
+	border-radius: 10em;
+	text-transform: capitalize;
+	transition: all 1s;
+	user-select: none;
+
+	&:hover {
+		transition: all 0.2s;
+		background-color: $hover-bg;
+		color: $hover-clr;
+	}
+
+	&:active {
+		background-color: $primary;
+		color: $light;
+	}
+}

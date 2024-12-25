@@ -1,0 +1,9 @@
+@use 'vars' as *;
+
+@mixin glass($blur: 0.3em, $bg: $acrylic-light) {
+	background-color: $bg;
+	backdrop-filter: blur($blur);
+	border-top: 1px solid $acrylic-light;
+	border-right: 1px solid $acrylic-light;
+	border-radius: 1em;
+}
